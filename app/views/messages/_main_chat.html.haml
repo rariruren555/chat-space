@@ -1,4 +1,13 @@
 .chat_main
-  .chat-main__group-list
+  .chat-main__group-info
+    .group
+      .group__name 
+        TECH CAMP
+      .group__memberlist
+        Member :
+        .group__member
+          suzuki
+    = link_to '#', class: "edit-btn" do
+      Edit
   .chat-main__message-list
   .chat-main__message-form

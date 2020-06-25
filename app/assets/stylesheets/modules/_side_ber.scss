@@ -10,24 +10,47 @@
     justify-content: center;
     align-items: center;
     .top-items {
-      background-color: #d8d8d8d8;
       width: 260px;
       height: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       &__name {
-
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
       }
       &__icons {
         width: 60px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      &__btn {
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+        margin-left: 5px;
       }
     }
   }
-
   &__group-list {
     background-color: #2f3e51;
     width: 300px;
     height: calc(100vh - 100px);
+    padding: 0 20px;
+    overflow: scroll;
+    .group {
+      padding: 20px 0 40px;
+      text-decoration: none;
+      &__name {
+        font-size: 15px;
+        color: #ffffff;
+      }
+      &__message {
+        font-size: 11px;
+        color: #ffffff;
+        margin-top: 5px;
+      }
+    }
   }
 }
