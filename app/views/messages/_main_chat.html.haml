@@ -1,0 +1,36 @@
+.chat_main
+  .chat-main__group-info
+    .group
+      .group__name 
+        TECH CAMP
+      .group__memberlist
+        Member：
+        .group__memberlist__member
+          suzuki
+    = link_to '#', class: "edit-btn" do
+      Edit
+  .chat-main__message-list
+    .messagebox
+      .messagebox__namedate
+        .messagebox__namedate__name
+          suzuki
+        .messagebox__namedate__date
+          2020年06月26日 11時30分
+      .messagebox__text
+        おはよう
+    .messagebox
+      .messagebox__namedate
+        .messagebox__namedate__name
+          suzuki
+        .messagebox__namedate__date
+          2020年06月26日 11時35分
+      .messagebox__text
+        こんにちは
+  .chat-main__message-form
+    %form.content
+      .content__contents
+        %input{type: "text", class: "content__contents__message", placeholder: "type a message"}
+        %label{class: "content__contents__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "content__contents__image__icon"}
+      %input{type: "submit", class: "submit", value: "Send"}
