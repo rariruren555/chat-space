@@ -10,9 +10,10 @@
           = icon('fa', 'cog', class: "top-items__btn--icon")
 
   .side-ber__group-list
-    .group
-      =link_to "#", class: "group a" do
-        .group__name
-          TECH CAMP
-        .group__message
-          まだメッセージはありません。
+    - current_user.groups.each do |group|
+      .group
+        =link_to "#", class: "group a" do
+          .group__name
+            = group.name
+          .group__message
+            まだメッセージはありません。
