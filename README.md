@@ -6,8 +6,8 @@
 |password|string|null: false|
 |name|string|null: false, add_index: true|
 ### Association
-- has_many :group_user
-- has_many :groups, through: :group_user
+- has_many :group_users
+- has_many :groups, through: :group_users
 - has_many :messages
 
 ## groupsテーブル
@@ -15,8 +15,8 @@
 |------|----|------|
 |name|string|null: false|
 ### Association
-- has_many :group_user
-- has_many :users, through: :group_user
+- has_many :group_users
+- has_many :users, through: :group_users
 - has_many :messages
 
 ## group_userテーブル
