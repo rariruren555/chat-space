@@ -13,7 +13,7 @@
 ## groupsテーブル
 |Column|Type|Option|
 |------|----|------|
-|name|string|null: false|
+|name|string|null: false, add_index:true|
 ### Association
 - has_many :users_groups
 - has_many :users, through: :users_groups
