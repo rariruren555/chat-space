@@ -19,7 +19,7 @@
 - has_many :users, through: :users_groups
 - has_many :messages
 
-## users_groupsテーブル
+## group_userテーブル
 |Column|Type|Option|
 |------|----|------|
 |user_id|integer|null: false, foreign_key: true|
