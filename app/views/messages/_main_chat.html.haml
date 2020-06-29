@@ -1,12 +1,13 @@
 .chat_main
   .chat-main__group-info
     .group
-      .group__name 
-        TECH CAMP
+      .group__name
+        = @group.name
       .group__memberlist
         Member：
-        .group__memberlist__member
-          suzuki
+        - @group.users.each do |user|
+          .group__memberlist__member
+            = user.name
     = link_to '#', class: "edit-btn" do
       Edit
   .chat-main__message-list
