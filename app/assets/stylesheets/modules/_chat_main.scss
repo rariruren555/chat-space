@@ -44,6 +44,7 @@
     width: calc(100vw - 300px);
     height: calc(100vh - 190px);
     padding: 35px 40px;
+    overflow: scroll;
     .messagebox {
       margin-bottom: 46px;
       &__namedate {

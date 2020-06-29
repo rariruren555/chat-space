@@ -8,25 +8,10 @@
         - @group.users.each do |user|
           .group__memberlist__member
             = user.name
-    = link_to '#', class: "edit-btn" do
+    = link_to edit_group_path(@group), class: "edit-btn" do
       Edit
   .chat-main__message-list
-    .messagebox
-      .messagebox__namedate
-        .messagebox__namedate__name
-          suzuki
-        .messagebox__namedate__date
-          2020年06月26日 11時30分
-      .messagebox__text
-        おはよう
-    .messagebox
-      .messagebox__namedate
-        .messagebox__namedate__name
-          suzuki
-        .messagebox__namedate__date
-          2020年06月26日 11時35分
-      .messagebox__text
-        こんにちは
+    = render @messages
   .chat-main__message-form
     = form_with model: [@group, @message], html: {class: "content"}, local: true do |f|
       .content__contents
