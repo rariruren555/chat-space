@@ -27,10 +27,10 @@
       .messagebox__text
         こんにちは
   .chat-main__message-form
-    %form.content
+    = form_with model: [@group, @message], html: {class: "content"}, local: true do |f|
       .content__contents
-        %input{type: "text", class: "content__contents__message", placeholder: "type a message"}
-        %label{class: "content__contents__image"}
+        = f.text_field :content, class: "content__contents__message", placeholder: "type a message"
+        = f.label :image, class: "content__contents__image" do
           = icon('fas', 'image')
-          %input{type: "file", class: "content__contents__image__icon"}
-      %input{type: "submit", class: "submit", value: "Send"}
+          = f.file_field :image, class: "content__contents__image__icon"
+      = f.submit 'Send', class: "submit"
